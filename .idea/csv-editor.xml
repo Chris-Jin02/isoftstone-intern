@@ -17,6 +17,20 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="\day3\房天下所有页_多线程.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\day3\房天下所有页_多线程2.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
       </map>
     </option>
   </component>

@@ -42,5 +42,4 @@ position_wind_power = '//*[@id="7d"]/ul/li[4]/p[3]/i/text()'
 wind_power = page.xpath(position_wind_power)
 print(wind_power[0])
 
-# 7天
 
