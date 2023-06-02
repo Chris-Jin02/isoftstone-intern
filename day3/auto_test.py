@@ -4,7 +4,6 @@
 # 文件名：auto_test.py
 
 from selenium import webdriver
-global browser
 driver_path = r'D:\anaconda\Scripts\chromedriver.exe'
 chrome=webdriver.Chrome()
 chrome.get('http://www.baidu.com')
