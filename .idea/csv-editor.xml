@@ -24,6 +24,13 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="\day4\58_firstPage.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="\day4\58_tong_cheng.csv">
           <value>
             <Attribute>
