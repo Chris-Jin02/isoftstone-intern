@@ -38,6 +38,13 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="\day5\新冠最新数据.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
       </map>
     </option>
   </component>

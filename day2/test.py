@@ -1,7 +1,7 @@
 # 小组：01
 # 作者：姜何飞飞
 # 创建时间：2023/5/31 16:02
-# 文件名：test.py
+# 文件名：58_page.py
 import requests as req
 #from fake_useragent import UserAgent #随机请求头
 from bs4 import BeautifulSoup

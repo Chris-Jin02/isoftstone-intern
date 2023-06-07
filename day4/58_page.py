@@ -1,25 +1,25 @@
 # 小组：01
 # 作者：姜何飞飞
 # 创建时间：2023/6/5 9:26
-# 文件名：test.py
+# 文件名：58_page.py
 
 from selenium import webdriver   #浏览器驱动
 from selenium.webdriver.common.by import By #按照什么方式查找元素
 import time
-chrome=webdriver.Chrome()
+chrome = webdriver.Chrome()
 chrome.get('https://xa.58.com/')#打开58同城
 #点击登录按钮
-chrome.find_element(By.XPATH,'//*[@id="commonTopbar_login"]/a[1]').click()
+chrome.find_element(By.XPATH, '//*[@id="commonTopbar_login"]/a[1]').click()
 time.sleep(1)
 #切换到账号密码登录
-chrome.find_element(By.XPATH,'//*[@id="mask_body"]/div[2]/div[1]/span[1]').click()
+chrome.find_element(By.XPATH, '//*[@id="mask_body"]/div[2]/div[1]/span[1]').click()
 time.sleep(1)
 #输入用户名,密码，点击登录按钮
-chrome.find_element(By.XPATH,'//*[@id="mask_body_item_username"]').send_keys('17789799030')
-chrome.find_element(By.XPATH,'//*[@id="mask_body_item_newpassword"]').send_keys('feige123')
-chrome.find_element(By.XPATH,'//*[@id="mask_body_item_login"]').click()
+chrome.find_element(By.XPATH, '//*[@id="mask_body_item_username"]').send_keys('17789799030')
+chrome.find_element(By.XPATH, '//*[@id="mask_body_item_newpassword"]').send_keys('feige123')
+chrome.find_element(By.XPATH, '//*[@id="mask_body_item_login"]').click()
 time.sleep(1)
-#向输入框中输入招聘（搜索内容）
+# 向输入框中输入招聘（搜索内容）
 chrome.find_element(By.ID, r'keyword').send_keys('招聘')
 time.sleep(3)
 
@@ -30,18 +30,20 @@ time.sleep(3)
 # 点击每一个岗位
 chrome.find_element(By.XPATH, r'//*[@id="jingzhun"]/a').click()
 time.sleep(6)
-#以上代码无论爬取一个岗位还是一页岗位或者是所有页的岗位都要进行的操作
-current_window_handle=None #声明一个句柄
+# 以上代码无论爬取一个岗位还是一页岗位或者是所有页的岗位都要进行的操作
+current_window_handle = None #声明一个句柄
 
 def getFirstPage():
     # 切换浏览器
     current_window_handle = chrome.current_window_handle #获取当前页面的句柄
-    a_links= chrome.find_elements(By.XPATH,'//*[@id="jingzhun"]/a') #获取的就是一组对象(获取所有的链接) 28
+    a_links = chrome.find_elements(By.XPATH, '//*[@id="jingzhun"]/a') #获取的就是一组对象(获取所有的链接) 28
     print(len(a_links))
-    index=0
+    index = 0
+    page = chrome.find_element(By.XPATH, '/html/body/div[4]/div[4]/div[1]/div[2]/a[2]')
     with open("./58_firstPage.csv", "a+", newline=None, encoding='utf-8') as f:
         for a_link in a_links:
-            a_link.click() #点击链接
+            # 点击链接
+            a_link.click()
             info = getPosInfo()
             # a_link=a_link #为了增强程序健壮性
             # toPosInfo(a_link) #为了增强程序健壮性
@@ -174,7 +176,7 @@ def getPosInfo():
             des = '未找到数据'
         time.sleep(1)
         #print('职位描述:\n'+des)
-        info = '%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s' % (company_name,modify_time,totalcount,apply_num,pos_title,pos_salary,pos_name,pos_welfare,pos_base_condition,pos_area,des)
+        info = '%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s' % (company_name, modify_time, totalcount, apply_num, pos_title, pos_salary, pos_name, pos_welfare, pos_base_condition, pos_area, des)
         # print(info+"\n")
         return info
 
@@ -185,6 +187,10 @@ def getPosInfo():
         # getPosInfo(a_link) #出错的情况下才 递归：直接或间接调用方法本身
     finally:
         chrome.close() #关闭详情页
+
+def getAllpages():
+    for i in range(1, 10):
+        getFirstPage()
 
 
 
