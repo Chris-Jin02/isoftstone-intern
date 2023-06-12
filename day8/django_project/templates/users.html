@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+{#    引入css文件   #}
+<link rel="stylesheet" href="/static/css/outer.css">
+{#  引入js文件  #}
+{#<script src="/static/js/outer.js"></script>#}
+<script src="/static/js/jquery.js"></script>
+
+</head>
+<body>
+
+
+<div id="user-list"></div>
+<span>引用外部css文件</span>
+<img src="/static/images/111.jpg" width="300px" height="300px">
+</body>
+<script>
+    {#$.ajax_users({#}
+    {#    type: "get", //请求方式  get/post#}
+    {#    url: "/ajax_users/", //请求地址#}
+    {#    data: null, //传递到后台的参数#}
+    {#    success: function(msg){  //成功回调函数#}
+    {#       alert(msg);#}
+    {#       $('span').html(msg);#}
+    {#    },#}
+    {#    error:function (){#}
+    {#        console.log('出错了！！！')#}
+    {#    }#}
+    {# }) #}
+
+$(document).ready(function() {
+       $.ajax({
+           url: "{% url 'ajax_users' %}",
+           type: "GET",
+           success: function(data) {
+               var userList = JSON.parse(data);
+               var userTable = "<table><tr><th>User ID</th><th>Username</th><th>Password</th></tr>";
+               for (var i = 0; i < userList.length; i++) {
+                   userTable += "<tr><td>" + userList[i].userid + "</td><td>" + userList[i].username + "</td><td>" + userList[i].password + "</td></tr>";
+               }
+               userTable += "</table>";
+               $("#user-list").html(userTable);
+           },
+           error: function() {
+               $("#user-list").html("Error loading user list.");
+           }
+       });
+   });
+
+
+
+</script>
+</html>
