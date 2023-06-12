@@ -5,112 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b6154059-186e-44c8-a61b-a94c045e04c6" name="Changes" comment="mysql">
-      <change afterPath="$PROJECT_DIR$/.idea/python work.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assignment/arxiv.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Django-ddd.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JSONView-for-Chrome-master.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JSONView-for-Chrome-master/JSONView-for-Chrome-master/.project" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JSONView-for-Chrome-master/JSONView-for-Chrome-master/LICENSE.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JSONView-for-Chrome-master/JSONView-for-Chrome-master/WebContent/background.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JSONView-for-Chrome-master/JSONView-for-Chrome-master/WebContent/close_icon.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JSONView-for-Chrome-master/JSONView-for-Chrome-master/WebContent/codemirror/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JSONView-for-Chrome-master/JSONView-for-Chrome-master/WebContent/codemirror/codemirror.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JSONView-for-Chrome-master/JSONView-for-Chrome-master/WebContent/codemirror/codemirror.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JSONView-for-Chrome-master/JSONView-for-Chrome-master/WebContent/codemirror/css.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JSONView-for-Chrome-master/JSONView-for-Chrome-master/WebContent/codemirror/default.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JSONView-for-Chrome-master/JSONView-for-Chrome-master/WebContent/content.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JSONView-for-Chrome-master/JSONView-for-Chrome-master/WebContent/content_error.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JSONView-for-Chrome-master/JSONView-for-Chrome-master/WebContent/csseditor.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JSONView-for-Chrome-master/JSONView-for-Chrome-master/WebContent/csseditor.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JSONView-for-Chrome-master/JSONView-for-Chrome-master/WebContent/csseditor.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JSONView-for-Chrome-master/JSONView-for-Chrome-master/WebContent/error.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JSONView-for-Chrome-master/JSONView-for-Chrome-master/WebContent/jsonview-core.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JSONView-for-Chrome-master/JSONView-for-Chrome-master/WebContent/jsonview.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JSONView-for-Chrome-master/JSONView-for-Chrome-master/WebContent/jsonview128.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JSONView-for-Chrome-master/JSONView-for-Chrome-master/WebContent/jsonview16.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JSONView-for-Chrome-master/JSONView-for-Chrome-master/WebContent/jsonview48.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JSONView-for-Chrome-master/JSONView-for-Chrome-master/WebContent/manifest.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JSONView-for-Chrome-master/JSONView-for-Chrome-master/WebContent/options.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JSONView-for-Chrome-master/JSONView-for-Chrome-master/WebContent/options.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JSONView-for-Chrome-master/JSONView-for-Chrome-master/WebContent/options.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JSONView-for-Chrome-master/JSONView-for-Chrome-master/WebContent/options.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JSONView-for-Chrome-master/JSONView-for-Chrome-master/WebContent/workerFormatter.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JSONView-for-Chrome-master/JSONView-for-Chrome-master/WebContent/workerJSONLint.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day7/html/七大区域确诊人数_饼图_南丁格尔玫瑰图.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day7/html/全国各省确诊人数_地图.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day7/src/map.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day7/src/pie.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day8/django_project/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day8/django_project/.idea/django_project.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day8/django_project/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day8/django_project/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day8/django_project/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day8/django_project/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day8/django_project/db.sqlite3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day8/django_project/django_project/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day8/django_project/django_project/asgi.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day8/django_project/django_project/settings.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day8/django_project/django_project/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day8/django_project/django_project/views.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day8/django_project/django_project/wsgi.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day8/django_project/manage.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day8/django_project/static/css/outer.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day8/django_project/static/images/111.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day8/django_project/static/js/jquery.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day8/django_project/static/js/outer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day8/django_project/templates/hello.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day8/django_project/templates/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day8/django_project/templates/users.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/djangoProject.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/djangoProject/__MACOSX/._djangoProject" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/djangoProject/__MACOSX/djangoProject/._.DS_Store" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/djangoProject/__MACOSX/djangoProject/._.idea" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/djangoProject/__MACOSX/djangoProject/._djangoProject" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/djangoProject/__MACOSX/djangoProject/._static" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/djangoProject/__MACOSX/djangoProject/._templates" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/djangoProject/__MACOSX/djangoProject/.idea/._inspectionProfiles" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/djangoProject/__MACOSX/djangoProject/djangoProject/._.DS_Store" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/djangoProject/__MACOSX/djangoProject/djangoProject/.___pycache__" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/djangoProject/__MACOSX/djangoProject/djangoProject/._asgi.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/djangoProject/__MACOSX/djangoProject/djangoProject/._settings.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/djangoProject/__MACOSX/djangoProject/djangoProject/._urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/djangoProject/__MACOSX/djangoProject/djangoProject/._views.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/djangoProject/__MACOSX/djangoProject/djangoProject/._wsgi.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/djangoProject/__MACOSX/djangoProject/static/._.DS_Store" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/djangoProject/__MACOSX/djangoProject/static/._css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/djangoProject/__MACOSX/djangoProject/static/._images" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/djangoProject/__MACOSX/djangoProject/static/._js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/djangoProject/__MACOSX/djangoProject/static/._plugins" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/djangoProject/__MACOSX/djangoProject/static/css/._outer.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/djangoProject/__MACOSX/djangoProject/static/images/._xm.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/djangoProject/__MACOSX/djangoProject/static/js/._jquery.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/djangoProject/__MACOSX/djangoProject/static/js/._outer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/djangoProject/__MACOSX/djangoProject/templates/._.DS_Store" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/djangoProject/__MACOSX/djangoProject/templates/._index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/djangoProject/__MACOSX/djangoProject/templates/._test.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/djangoProject/djangoProject/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/djangoProject/djangoProject/.idea/djangoProject.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/djangoProject/djangoProject/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/djangoProject/djangoProject/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/djangoProject/djangoProject/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/djangoProject/djangoProject/db.sqlite3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/djangoProject/djangoProject/djangoProject/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/djangoProject/djangoProject/djangoProject/asgi.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/djangoProject/djangoProject/djangoProject/settings.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/djangoProject/djangoProject/djangoProject/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/djangoProject/djangoProject/djangoProject/views.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/djangoProject/djangoProject/djangoProject/wsgi.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/djangoProject/djangoProject/manage.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/djangoProject/djangoProject/static/css/outer.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/djangoProject/djangoProject/static/images/xm.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/djangoProject/djangoProject/static/js/jquery.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/djangoProject/djangoProject/static/js/outer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/djangoProject/djangoProject/templates/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/djangoProject/djangoProject/templates/test.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/djangoProject/djangoProject/templates/users.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/52823e7c-2719-4d54-8e9a-5efa8ebdd32c.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/52823e7c-2719-4d54-8e9a-5efa8ebdd32c.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/52823e7c-2719-4d54-8e9a-5efa8ebdd32c/storage_v2/_src_/schema/sys.zb4BAA.zip" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/52823e7c-2719-4d54-8e9a-5efa8ebdd32c/storage_v2/_src_/schema/sys.zb4BAA.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day8/django_project/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day8/django_project/user/migrations/0001_initial.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day8/django_project/utils.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/day2/7day.py" beforeDir="false" afterPath="$PROJECT_DIR$/day2/7day.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/day8/django_project/django_project/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/day8/django_project/django_project/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/day8/django_project/django_project/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/day8/django_project/django_project/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/day8/django_project/django_project/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/day8/django_project/django_project/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/day8/django_project/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/day8/django_project/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/day8/django_project/templates/users.html" beforeDir="false" afterPath="$PROJECT_DIR$/day8/django_project/templates/users.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -161,7 +65,7 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;ToolWindowPython 控制台.ShowToolbar&quot;: &quot;false&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/python work/day5/visual.py&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/python work&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -184,7 +88,7 @@
       <recent name="D:\python work\day1" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.40day">
+  <component name="RunManager" selected="Python.7day">
     <configuration name="1" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="python work" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -223,6 +127,28 @@
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/day2/40day.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="7day" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="python work" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/day2" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/day2/7day.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
       <option name="REDIRECT_INPUT" value="false" />
@@ -339,28 +265,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="pie" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="python work" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/day7/src" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/day7/src/pie.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="plot" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="python work" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -368,25 +272,6 @@
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/day7" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="D:\python work\day7\src\plot.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="plot" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="python work" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/day7/src" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -406,19 +291,19 @@
       <item itemvalue="Python.1" />
       <item itemvalue="Python.main" />
       <item itemvalue="Python.plot" />
+      <item itemvalue="Python.7day" />
       <item itemvalue="Python.40day" />
       <item itemvalue="Python.manage" />
       <item itemvalue="Python.arxiv" />
       <item itemvalue="Python.map" />
-      <item itemvalue="Python.pie" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.7day" />
         <item itemvalue="Python.40day" />
         <item itemvalue="Python.manage" />
         <item itemvalue="Python.arxiv" />
         <item itemvalue="Python.map" />
-        <item itemvalue="Python.pie" />
       </list>
     </recent_temporary>
   </component>
@@ -451,7 +336,9 @@
       <workItem from="1686187500986" duration="10771000" />
       <workItem from="1686209094349" duration="2239000" />
       <workItem from="1686272959498" duration="5437000" />
-      <workItem from="1686532487010" duration="2468000" />
+      <workItem from="1686532487010" duration="2640000" />
+      <workItem from="1686577870356" duration="244000" />
+      <workItem from="1686578735999" duration="815000" />
     </task>
     <task id="LOCAL-00001" summary="Changes">
       <created>1685502888322</created>
@@ -649,7 +536,7 @@
     <SUITE FILE_PATH="coverage/python_work$fangtianxia.coverage" NAME="fangtianxia 覆盖结果" MODIFIED="1685606604555" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/day2" />
     <SUITE FILE_PATH="coverage/python_work$mysql.coverage" NAME="mysql 覆盖结果" MODIFIED="1686188804876" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/day6" />
     <SUITE FILE_PATH="coverage/python_work$main.coverage" NAME="main 覆盖结果" MODIFIED="1685415331615" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/python_work$7day.coverage" NAME="7day 覆盖结果" MODIFIED="1685523291341" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/day2" />
+    <SUITE FILE_PATH="coverage/python_work$7day.coverage" NAME="7day 覆盖结果" MODIFIED="1686577985855" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/day2" />
     <SUITE FILE_PATH="coverage/python_work$40day.coverage" NAME="40day 覆盖结果" MODIFIED="1685521033429" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/day2" />
     <SUITE FILE_PATH="coverage/python_work$ftx_multi_thread.coverage" NAME="ftx_multi_thread 覆盖结果" MODIFIED="1685610645070" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/day3" />
     <SUITE FILE_PATH="coverage/python_work$visual.coverage" NAME="visual 覆盖结果" MODIFIED="1685949634072" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/day5" />

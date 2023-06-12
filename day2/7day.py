@@ -30,7 +30,7 @@ win_pairs = ['转'.join((win_tags[i]['title'], win_tags[i+1]['title'])) for i in
 
 win_power = soup.find_all(lambda tag: tag.name == 'i' and '级' in tag.get_text())
 
-with open("./7day_weather_soup.csv", "a+", encoding='utf-8-sig') as f:
+with open("./7day_weather_soup.csv2", "a+", encoding='utf-8-sig') as f:
     for i in range(len(wea)):
         print(element_date[i].get_text()+","+wea[i].get_text()+","+tem[i].get_text(strip=True)+","+win_pairs[i]+","+win_power[i].get_text())
         f.write(element_date[i].get_text()+","+wea[i].get_text()+","+tem[i].get_text(strip=True)+","+win_pairs[i]+","+win_power[i].get_text()+"\n")
