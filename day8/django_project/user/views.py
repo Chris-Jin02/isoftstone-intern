@@ -1,9 +1,11 @@
 from django.shortcuts import render
 
 # Create your views here.
+from django.contrib.auth import authenticate, login
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from user.models import Users
-
+import json
 
 def testAdd(request):
     print('添加...')
@@ -35,3 +37,23 @@ def getUserInfoByUserid(request):
     print(user.password)
     # print(user.sex)
     return HttpResponse(user.username)
+
+def getAllUserInfo(request):
+    print('查询所有')
+    userList = Users.objects.all()
+    from utils import querySetToJson
+    res = querySetToJson(userList.values())
+    return HttpResponse(res)
+
+def signin(request):
+    print('登录')
+    if request.method == 'POST':
+        username = request.POST['username']
+        password = request.POST['password']
+        print(username)
+        print(password)
+        user = Users.objects.get(username=username, password=password)
+        user = json.dumps(user, default=lambda o: o.__dict__, ensure_ascii=False)
+        return redirect('/test')
+    return render(request, 'login.html')
+

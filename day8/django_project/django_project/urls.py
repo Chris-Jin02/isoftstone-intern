@@ -34,6 +34,7 @@ urlpatterns = [
     path('user/removeUserByUserid/', user.views.removeUserByUserid),
     path('user/modifyUserByUserid/', user.views.modifyUserByUserid),
     path('user/getUserInfoByUserid/', user.views.getUserInfoByUserid),
-    # path('user/getAllUserInfo/', user.views.getAllUserInfo),
+    path('user/getAllUserInfo/', user.views.getAllUserInfo),
+    path('user/login/', user.views.signin, name='/login'),
 
 ]

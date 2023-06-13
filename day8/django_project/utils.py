@@ -11,3 +11,4 @@ def querySetToJson(para):
     for i in para:
         res.append(i)
     return json.dumps(res, ensure_ascii=False)
+
