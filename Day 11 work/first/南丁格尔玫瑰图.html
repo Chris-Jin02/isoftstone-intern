@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="../js/echarts.min.js"></script>
+	</head>
+	<body>
+		<div id="main" style="width: 600px;height: 400px;"></div>
+	</body>
+	<script>
+		var myChart= echarts.init(document.getElementById("main"));
+		var option = {
+				title: {
+					text: '中国七大区域确诊人数',
+					subtext: '数据来源于网络',
+					left: 'center'
+				},
+				tooltip: {
+					trigger: 'item',
+					formatter: '{a} <br/>{b} : {c} ({d}%)'
+				},
+				legend: {
+					left: 'center',
+					top: 'bottom',
+					data: ['rose1', 'rose2', 'rose3', 'rose4', 'rose5', 'rose6', 'rose7', 'rose8']
+				},
+				series: [{
+					name: '确诊区域',
+					type: 'pie',
+					radius: [30, 110],
+					center: ['50%', '50%'],
+					roseType: 'area',
+					data: [
+						{value: 432701, name: '华中'},
+						{value: 301806, name: '华东'},
+						{value: 145783, name: '华南'},
+						{value: 141487, name: '华北'},
+						{value: 98428, name: '西南'},
+						{value: 47376, name: '东北'},
+						{value: 36232, name: '西北'}
+					]
+				}]
+		};
+		myChart.setOption(option);
+	</script>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>治愈人数最多的十个省份</title>
+    <!-- 导入 echarts 主题 -->
+    <script src="../js/echarts.min.js"></script>
+    <script src="../js/macarons.js"></script><!-- echarts 提供的比较美观的主题  -->
+    <style>
+        /* 页面全局样式 */
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+            font-family: 'Microsoft YaHei', Helvetica, Arial, sans-serif;
+        }
+        /* 图表容器样式 */
+        #main {
+            width: 600px;
+            height: 400px;
+            margin: 0 auto; /* 居中显示 */
+        }
+    </style>
+</head>
+<body>
+    <div id="main"></div> <!-- echarts 图表容器 -->
+</body>
+
+<script>
+    // 初始化 echarts 实例
+    var myChart= echarts.init(document.getElementById("main"), 'macarons'); // 使用 macarons 主题（默认为 light）
+
+    // 图表配置项
+    var option={
+        title:{
+            text:'治愈人数最多的十个省份', //正标
+            left:'center', //位置
+            textStyle: { //标题文本样式
+                fontSize: 22, //字体大小
+                fontWeight: 'bold', //是否加粗
+                color: '#333' //文字颜色
+            },
+            subtextStyle: { //副标题文本样式
+                fontSize: 14,
+                color: '#aaa'
+            }
+        },
+        grid: { //坐标系设置
+            top: "8%",
+            left: "3%",
+            right: "5%",
+            bottom: "3%",
+            containLabel: true
+        },
+        yAxis: { //Y轴设置
+            type: "category",
+            inverse:true, //翻转（因为系统默认是数量最多的应该在最后面）
+            data: [ //数据，数组格式的（列表）
+                "湖北",
+                "广东",
+                "河南",
+                "浙江",
+                "湖南",
+                "安徽",
+                "江苏",
+                "四川",
+                "山东",
+                "黑龙江"
+            ],
+            axisTick: { //坐标轴刻度线设置
+                show: false //不显示刻度线
+            },
+            axisLine: { //坐标轴轴线设置
+                show: true,  //显示轴线
+                lineStyle: { //轴线样式配置项
+                    color: '#ddd' //轴线颜色
+                }
+            },
+            axisLabel: { //坐标轴刻度标签设置
+                interval: 0, //强制使用主轴线分离的间隔，即让 label 显示每一个数据
+                margin: 10, //刻度标签与轴线之间的距离
+                color: '#999', //文本颜色
+                fontSize: 12 //字号大小
+            },
+        },
+        xAxis: { //X轴设置
+            type: "value",
+            axisTick: {
+                show: false //不显示刻度线
+            },
+            axisLine: {
+                show: true,
+                lineStyle: {
+                    color: '#ddd'
+                }
+            },
+        },
+        series: { //系列参数
+            type: "bar",
+            barWidth: 16, //柱条宽度，可以是数字或百分比
+            barMaxWidth: 40, //柱条最大宽度
+            itemStyle: { //图形样式配置项
+                normal: {
+                    barBorderRadius: 8, //柱形圆角半径
+                    color: new echarts.graphic.LinearGradient(0, 0, 1, 0, [{ //柱形渐变色设置
+                        offset: 0,
+                        color: '#00a6ac'
+                    }, {
+                        offset: 1,
+                        color: '#32c3c9'
+                    }]),
+                    label: { //图形上的文本标签配置项
+                        show: true,
+                        position: 'right', //位置
+                        color: '#333',
+                        fontStyle: 'normal',//字体风格
+                        fontWeight: 'bold',//字体粗细
+                        fontSize: 13,//字号大小
+                    }
+                }
+            },
+            data: [68563, 11085, 10190, 10149, 10052, 9928, 9362, 8985, 8781, 7168]
+        }
+    };
+    myChart.setOption(option);
+</script>
+</html>
