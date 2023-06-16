@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<!-- <script src="../js/echarts.min.js"></script> -->
+		<script src="../js/echart3.js"></script>
+		<script src="../js/echarts-wordcloud.js"> </script>
+
+	</head>
+	<body>
+		<div id="main" style="width: 500px;height: 300px;"></div>
+	</body>
+	<script>
+		var myChart= echarts3.init(document.getElementById("main"));
+		var keywords = [{"name":"武汉","value":2.64},
+		                {"name":"医院","value":4.03},
+		                {"name":"口罩","value":24.95}, //value为词云的大小
+		                {"name":"硬核","value":4.04},
+		                {"name":"致敬","value":5.27},
+		                {"name":"陪伴","value":5.80},
+		                {"name":"学习","value":3.09},
+		                {"name":"健康","value":24.71},
+		                {"name":"网课","value":6.33},
+		                {"name":"医生","value":2.55},
+		                {"name":"战士","value":3.88},
+		                {"name":"娱乐","value":8.04},
+		                {"name":"购物","value":5.87},
+		                {"name":"短视频","value":6.97}
+		]
+		var option={
+			series: [{
+			    type: 'wordCloud',
+			    sizeRange: [15, 80],
+			    rotationRange: [0, 0],
+			    rotationStep: 45,
+			    gridSize: 8,
+			    shape: 'pentagon',
+			    width: '100%',
+			    height: '100%',
+			    textStyle: {
+			        normal: {
+			            color: function () {
+							return 'rgb(' + [
+			                    Math.round(Math.random() * 160),
+			                    Math.round(Math.random() * 160),
+			                    Math.round(Math.random() * 160)
+			                 ].join(',') + ')';
+			            }
+			        }
+			    },
+			    data: keywords   //真实数据
+			}]
+		};
+        myChart.setOption(option);
+		window.addEventListener("resize", function() {
+		    myChart.resize();
+		});
+	</script>
+</html>

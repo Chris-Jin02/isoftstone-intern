@@ -1,0 +1,36 @@
+body{
+ 	background-image: url(../images/screen_full.png); 
+	/* background-image: url(../images/bg_screen_full.jpg); */
+	width: auto;
+	height: auto;
+}
+fieldset{
+    position: absolute; 
+    /* top: 20px;
+    left: 20px; */ 
+    width: 100px; 
+    height: 100px;
+	border: 2px solid #55aaff;
+	//border-radius: 10px;
+    background: linear-gradient(to left, #55aaff, #55aaff) left top no-repeat, 
+                linear-gradient(to bottom, #55aaff, #55aaff) left top no-repeat, 
+                linear-gradient(to left, #55aaff, #55aaff) right top no-repeat,
+                linear-gradient(to bottom, #55aaff, #55aaff) right top no-repeat, 
+                linear-gradient(to left, #55aaff, #55aaff) left bottom no-repeat,
+                linear-gradient(to bottom, #55aaff, #55aaff) left bottom no-repeat,
+                linear-gradient(to left, #55aaff, #55aaff) right bottom no-repeat,
+                linear-gradient(to left, #55aaff, #55aaff) right bottom no-repeat;
+    background-size: 4px 20px, 20px 4px, 4px 20px, 20px 4px;  //左上,左下,右下,右上
+}
+
+legend{
+	background-color: #55aaff;
+	border-radius: 10px;
+	font-family: '楷体';
+	color: aliceblue;
+}
+
+.outer{
+	float: left;
+	margin-left: 15px;
+}

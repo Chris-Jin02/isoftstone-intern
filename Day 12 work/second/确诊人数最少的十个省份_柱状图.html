@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>确诊人数最少的前十个省份</title>
+    <script src="../js/echarts.min.js"></script>
+</head>
+<body>
+    <div id="main" style="width: 300px; height: 350px;"></div>
+
+    <script>
+        var myChart = echarts.init(document.getElementById("main"), "dark");
+
+        // 可调整的参数
+        var yAxisData = ['西藏自治区省', '澳门特别行政区', '宁夏回族自治区',
+                         '新疆维吾尔自治区', '内蒙古自治区', '吉林省', '甘肃省', '台湾省', '辽宁省'];
+        var seriesData = [74, 1300, 1315, 4949, 5006, 5719, 6320, 7904, 8464, 8924];
+
+        var option = {
+			grid: {
+            top: "0%",
+            left: "0%",
+            right: "4%",
+            bottom: "3%",
+            containLabel: true
+        },
+            yAxis: {
+                type: 'category',
+                inverse: true,
+                data: yAxisData,
+                axisLabel: {
+                    fontSize: 9 // 坐标轴刻度字体大小
+                },
+                axisLine: {
+                    show: false // 隐藏坐标轴线
+                },
+                axisTick: {
+                    show: false // 隐藏坐标轴刻度线
+                }
+            },
+            xAxis: {
+                type: 'value',
+                axisLabel: {
+                    fontSize: 14,// 坐标轴刻度字体大小
+					color: '#666'
+                },
+                axisLine: {
+                    show: true,
+                    lineStyle: {
+                        color: '#666' // 坐标轴线颜色
+                    }
+                },
+                splitLine: {
+                    show: true,
+                    lineStyle: {
+                        type: 'dotted',
+                        color: '#ccc' // 分隔线颜色
+                    }
+                },
+                axisTick: {
+                    show: false // 隐藏坐标轴刻度线
+ }
+            },
+            series: [{
+                type: 'bar',
+                barWidth: 20,
+                itemStyle: {
+                    normal: {
+                        color: new echarts.graphic.LinearGradient(
+                            0, 0, 1, 0,
+                            [
+                                { offset: 0, color: '#00a6ac' }, // 渐变色起点
+                                { offset: 1, color: '#32c3c9' } // 渐变色终点
+                            ]
+                        ),
+                        barBorderRadius: [15, 15, 0, 0]
+                    }
+                },
+                label: {
+                    show: true,
+                    position: 'right',
+                    color: '#333',
+                    fontWeight: 'bold',
+                    fontSize: 12, // 标签字体大小
+                    formatter: function(params) {
+                        return params.data.toLocaleString();
+                    }
+                },
+                data: seriesData
+            }]
+        };
+
+        myChart.setOption(option);
+    </script>
+</body>
+</html>
+
+

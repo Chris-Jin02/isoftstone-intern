@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="../js/echarts.min.js"></script>
+		<script src="../js/china.js"></script> <!-- 地图的js -->
+	</head>
+	<body>
+		<div id="main" style="height: 800px;"></div>
+	</body>
+	<script>
+		
+		var myChart= echarts.init(document.getElementById("main"));
+		var name_title = "2019.12.01~2020.04.11全国确诊人数";
+		var subname = '数据来源于网络';
+		var nameColor = "rgb(55, 75, 113)";//标题颜色
+		var name_fontFamily = '等线';
+		var name_fontSize = 18;
+		var mapName = 'china';
+		var data = [
+		    {name:"湖北",value:4169676}, //建议使用excel进行格式的组装
+			{name:"广东",value:96206},
+			{name:"河南",value:86965},
+			{name:"浙江",value:86054},
+			{name:"湖南",value:70372},
+			{name:"安徽",value:67140},
+			{name:"江西",value:63565},
+			{name:"山东",value:48626},
+			{name:"江苏",value:42882},
+			{name:"重庆",value:39773},
+			{name:"四川",value:36575},
+			{name:"北京",value:32154},
+			{name:"黑龙江",value:32132},
+			{name:"上海",value:27081},
+			{name:"福建",value:21559},
+			{name:"河北",value:21084},
+			{name:"香港",value:19425},
+			{name:"广西",value:17333},
+			{name:"陕西",value:17073},
+			{name:"云南",value:12336},
+			{name:"海南",value:11504},
+			{name:"贵州",value:9670},
+			{name:"天津",value:9632},
+			{name:"山西",value:9333},
+			{name:"辽宁",value:8924},
+			{name:"台湾",value:8464},
+			{name:"甘肃",value:7904},
+			{name:"吉林",value:6320},
+			{name:"内蒙古",value:5719},
+			{name:"新疆",value:5006},
+			{name:"宁夏",value:4949},
+			{name:"澳门",value:1315},
+			{name:"青海",value:1300},
+			{name:"西藏",value:74}
+		    ];		    
+		var geoCoordMap = {};		
+		/*获取地图数据*/
+		myChart.showLoading();
+		var mapFeatures = echarts.getMap(mapName).geoJson.features;
+		myChart.hideLoading();
+		mapFeatures.forEach(function(v) {
+		    // 地区名称
+		    var name = v.properties.name;
+		    // 地区经纬度
+		    geoCoordMap[name] = v.properties.cp;		
+		});	
+		//convertData函数，组装在地图上展示的数据，包含省份的经纬度坐标和业务数据。
+		var convertData = function(data) {
+		    var res = [];
+		    for (var i = 0; i < data.length; i++) {
+		        var geoCoord = geoCoordMap[data[i].name];
+		        if (geoCoord) {
+		            res.push({
+		                name: data[i].name,
+		                value: geoCoord.concat(data[i].value),
+		            });
+		        }
+		    }
+		    return res;
+		};
+		option = {
+		    title: {
+		        text: name_title,
+		        subtext: subname,
+		        x: 'center',
+		        textStyle: {
+		            color: nameColor,
+		            fontFamily: name_fontFamily,
+		            fontSize: name_fontSize
+		        },
+		        subtextStyle:{
+		            fontSize:15,
+		            fontFamily:name_fontFamily
+		        }
+		    },
+			//tooltip，提示框显示内容
+		    tooltip: { //鼠标选中后显示的信息
+		        trigger: 'item',
+		        formatter: function(params) {		          
+		                var toolTiphtml = ''
+		                for(var i = 0;i<data.length;i++){
+		                    if(params.name==data[i].name){
+		                        toolTiphtml += data[i].name+':'+data[i].value+'<br>'		                       
+		                    }
+		                }
+		                return toolTiphtml;
+		            }
+		    },
+		    visualMap:{ //视觉组件---左下角的高度条
+		        show: true,
+		        min: 0,
+		        max: 100000,
+		        left: 'left',
+		        top: 'bottom',
+		        text: ['高', '低'], 
+		        calculable: true,
+		        seriesIndex: [1],
+		        inRange: {
+		            // color: ['#3B5077', '#031525'] // 蓝黑
+		            // color: ['#ffc0cb', '#800080'] // 红紫
+		            // color: ['#3C3B3F', '#605C3C'] // 黑绿
+		            // color: ['#0f0c29', '#302b63', '#24243e'] // 黑紫黑
+		            // color: ['#23074d', '#cc5333'] // 紫红
+					color: ['#A5CC82', '#00467F'] // 绿蓝
+		            // color: ['#1488CC', '#2B32B2'] // 浅蓝
+		            // color: ['#00467F', '#A5CC82'] // 蓝绿
+		            // color: ['#00467F', '#A5CC82'] // 蓝绿
+		            // color: ['#00467F', '#A5CC82'] // 蓝绿
+		            // color: ['#00467F', '#A5CC82'] // 蓝绿		
+		        }
+		    },
+		    geo: { //地理（地图）
+		        show: true,
+		        map: mapName,
+		        label: {
+		            normal: {
+		                show: false
+		            },
+		            emphasis: {
+		                show: false,
+		            }
+		        },
+		        roam: true,
+		        itemStyle: {
+		            normal: {
+		                areaColor: '#A5CC82',
+		                borderColor: '#3B5077',
+		            },
+		            emphasis: {
+		                areaColor: '#2B91B7', //鼠标移动到省份上的颜色
+		            }
+		        }
+		    },
+		    series: [{
+		            name: '散点',
+		            type: 'scatter',
+		            coordinateSystem: 'geo',
+		            data: convertData(data),
+					symbolSize:10,//散点大小--蓝色点的大小
+		            label: {
+		                normal: {
+		                    formatter: '{b}',
+		                    position: 'right',
+		                    show: true
+		                },
+		                emphasis: {
+		                    show: true
+		                }
+		            },
+		            itemStyle: {
+		                normal: {
+		                    color: '#5555ff'  //省份名字的颜色
+		                }
+		            }
+		        },
+		        {
+		            type: 'map',
+		            map: mapName,
+		            geoIndex: 0,
+		            aspectScale: 0.75, //长宽比
+		            showLegendSymbol: false, // 存在legend时显示
+		            label: {
+		                normal: {
+		                    show: true
+		                },
+		                emphasis: {
+		                    show: false,
+		                    textStyle: {
+		                        color: '#fff'
+		                    }
+		                }
+		            },
+		            roam: true,
+		            itemStyle: {
+		                normal: {
+		                    areaColor: '#031525',
+		                    borderColor: '#3B5077',
+		                },
+		                emphasis: {
+		                    areaColor: '#2B91B7'
+		                }
+		            },
+		            animation: false,
+		            data: data
+		        },
+		        {
+		            name: '点',
+		            type: 'scatter',
+		            coordinateSystem: 'geo',
+		            symbol: 'pin', //气泡
+					//symbolSize:50,//气泡大小--红色气球大小
+					symbolSize: function(val) {
+					    if(val[2]>=100000){
+							return val[2]/60000;
+						}else if(val[2]>10000){
+							return  50;
+						}else if(val[2]>1000){
+							return 40;
+						}else{
+							return 30;
+						}	
+					},
+		            label: {
+		                normal: {
+							//----------源码有问题-----------
+							//只显示业务数据，不显示经纬度
+							formatter: function(a){return a.value[2];} , //红色气球上的内容
+		                    show: true,
+		                    textStyle: {
+		                        color: '#000000',//气球上字体颜色
+		                        fontSize: 10,
+		                    }
+		                }
+		            },
+		            itemStyle: {
+		                normal: {
+		                    color: '#F62157', //标志颜色
+		                }
+		            },
+		            zlevel: 6,
+		            data: convertData(data),
+		        },
+		        {
+		            name: 'Top 3',
+		            type: 'effectScatter',
+		            coordinateSystem: 'geo',
+		            data: convertData(data.sort(function(a, b) {
+		                return b.value - a.value;
+		            }).slice(0, 3)), //闪圈的数量
+					symbolSize:20,//前3的气泡大小---黄色的点
+		            showEffectOn: 'render',
+		            rippleEffect: {
+		                brushType: 'stroke'
+		            },
+		            hoverAnimation: true,
+		            label: {
+		                normal: {
+		                    formatter: '{b}',
+		                    position: 'right',
+		                    show: true
+		                }
+		            },
+		            itemStyle: {
+		                normal: {
+		                    color: 'yellow',
+		                    shadowBlur: 10,
+		                    shadowColor: 'yellow'
+		                }
+		            },
+		            zlevel: 1
+		        },		
+		    ]
+		};
+		myChart.setOption(option);
+	</script>
+</html>
+
+		

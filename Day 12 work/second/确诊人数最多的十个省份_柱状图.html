@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../js/echarts.min.js"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+            font-family: 'Microsoft YaHei', Helvetica, Arial, sans-serif;
+        }
+        #main {
+            width: 100%;
+            height: 300px;
+            margin: 30px auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="main"></div>
+</body>
+
+<script>
+    // 初始化 echarts 实例
+    var myChart = echarts.init(document.getElementById("main"));
+
+    // 指定图表配置项和数据
+    var option = {
+        grid: {
+            top: "0%",
+            left: "0%",
+            right: "4%",
+            bottom: "3%",
+            containLabel: true
+        },
+        yAxis: {
+            type: "category",
+            inverse:true,
+            data: [
+                "湖北省",
+                "广东省",
+                "河南省",
+                "浙江省",
+                "湖南省",
+                "安徽省",
+                "江西省",
+                "山东省",
+                "江苏省",
+                "重庆市"
+            ],
+            axisTick: {
+                show: false
+            },
+            axisLine: {
+                show: true,
+                lineStyle: {
+                    color: '#666'
+                }
+            },
+            axisLabel: {
+                margin: 8,
+                fontSize: 9,
+                color: '#333'
+            }
+        },
+        xAxis: {
+            type: "value",
+            axisTick: {
+                show: false
+            },
+            axisLine: {
+                show: true,
+                lineStyle: {
+                    color: '#666'
+                }
+            },
+            axisLabel: {
+                margin: 10,
+                fontSize: 9,
+                color: '#333'
+            },
+            splitLine: {
+                show: true,
+                lineStyle: {
+                    type: 'dotted',
+                    color: '#ccc'
+                }
+            }
+        },
+        series: [
+            {
+                type: "bar",
+                barWidth: 20,
+                itemStyle: {
+                    normal: {
+                        color: new echarts.graphic.LinearGradient(
+                            0, 0, 1, 0,
+                            [
+                                { offset: 0, color: '#00a6ac' },
+                                { offset: 1, color: '#32c3c9' }
+                            ]
+                        ),
+                        barBorderRadius: [15, 15, 0, 0]
+                    }
+                },
+                label: {
+                    show: true,
+                    position: "right",
+                    color: "#333",
+                    fontWeight: 'bold',
+                    fontSize: 7,
+                    formatter: function(params) {
+                        return params.data.toLocaleString();
+                    }
+                },
+                data: [
+                    4169676,
+                    96206,
+                    86965,
+                    86054,
+                    70372,
+                    67140,
+                    63565,
+                    48626,
+                    42882,
+                    39773,
+                ],
+            }
+        ]
+    };
+
+    // 使用刚指定的配置项和数据显示图表。
+    myChart.setOption(option);
+</script>
+</html>
