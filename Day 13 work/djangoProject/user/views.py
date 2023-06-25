@@ -1,0 +1,62 @@
+import json
+
+from django.shortcuts import render
+
+from django.http import HttpResponse
+from user.models import Users,ProvinceAndConfirmedTop10
+
+def testAdd(request):
+    print('添加...')
+    user = Users(userid=2 ,username='任我行2', password='电饭锅2')
+    user.save() #保存
+    return HttpResponse("添加成功!")
+
+def removeUserByUserid(request):
+    print('删除...')
+    user = Users(userid=1)
+    user.delete()
+    return HttpResponse("删除成功!")
+
+def modifyUserByUserid(request):
+    print('修改...')
+    user = Users(userid=2)
+    user.username='任我行'
+    user.save()  # 如果id存在就为修改，否则为添加
+    return HttpResponse("修改成功!")
+
+def getUserInfoByUserid(request):
+    # 通过地址栏拼参访问此方法（get请求），获取get请求url中的id所对应的值
+    id=request.GET.get('id')
+    print('查询一个')
+    user = Users.objects.get(userid=id)
+    # user=Users.objects.get(userid=3)
+    print(user.userid)
+    print(user.username)
+    print(user.password)
+    print(user.sex)
+    print(json.dumps(user,default=lambda o:o.__dict__,ensure_ascii=False))
+    return HttpResponse(user.username)
+
+
+def getAllUserInfo(request):
+    print('查询所有')
+    userList=Users.objects.all()
+    # return HttpResponse(userList.values())
+    from utils import querySetToJson
+    res = querySetToJson(userList.values())
+    return HttpResponse(res, content_type='application/json')
+
+def login(request):
+    print('登录')
+    user=Users.objects.get(username='令狐冲',password='阿斯蒂芬')
+    user=json.dumps(user, default=lambda o: o.__dict__, ensure_ascii=False)
+    return HttpResponse(user)
+
+
+def getProvinceAndConfirmedTop10(request):
+    print('getProvinceAndConfirmedTop10...')
+    provinceAndConfirmedList= ProvinceAndConfirmedTop10.objects.all()
+    # print(provinceAndConfirmedList)
+    from utils import querySetToJson
+    res = querySetToJson(provinceAndConfirmedList.values())
+    return HttpResponse(res, content_type='application/json')
